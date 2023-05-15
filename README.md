@@ -15,7 +15,7 @@
 - exit [(man 3 exit)](/Resources/man_3_exit.txt)
 - _exit [(man 2 _exit)](/Resources/man_2__exit.txt)
 - fflush [(man 3 fflush)](/Resources/man_3_fflush.txt)
-- fork [(man 2 fork)](/Resources/man_2_fork.txt)_
+- fork [(man 2 fork)](/Resources/man_2_fork.txt)
 - free [(man 3 free)](/Resources/man_3_free.txt)
 - getcwd [(man 3 getcwd)](/Resources/man_3_getcwd.txt)
 - getline [(man 3 getline)](/Resources/man_3_getline.txt)
