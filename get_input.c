@@ -8,7 +8,7 @@
  * Return: line readed;
  */
 
-char* get_input(char *av)
+char *get_input(char **av)
 {
 	char *line = NULL;
 	size_t len = 0;
@@ -17,8 +17,8 @@ char* get_input(char *av)
 	nread =  getline(&line, &len, stdin);
 	if (nread == -1)
 	{
-		write(2,av[0],_strlen(av[0]));
-		write(2," :can not read input\n",21);
+		write(2, av[0], _strlen(av[0]));
+		write(2, " :can not read input\n", 21);
 		free(line);
 	}
 
