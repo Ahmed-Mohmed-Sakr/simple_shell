@@ -23,7 +23,7 @@ int start_shell(int ac, char **av, char **env)
 	{
 		write(1, shell_name, 5);
 		input = get_input(av);
-		tokens = input_tokenizer(input);
+		tokens = input_tokenizer(input, av);
 
 		free(line);
 		free(tokens);
