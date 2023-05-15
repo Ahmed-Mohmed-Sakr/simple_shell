@@ -25,7 +25,7 @@ int start_shell(int ac, char **av, char **env)
 		input = get_input(av);
 		tokens = input_tokenizer(input, av);
 
-		free(line);
+		free(input);
 		free(tokens);
 	}
 
