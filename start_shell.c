@@ -13,7 +13,8 @@
 int start_shell(int ac, char **av, char **env)
 {
 	char *shell_name = "AZA$ ";
-	char *line = NULL;
+	char *input = NULL;
+	char **tokens = NULL;
 
 	(void)ac;
 	(void)env;
@@ -21,12 +22,11 @@ int start_shell(int ac, char **av, char **env)
 	while (1)
 	{
 		write(1, shell_name, 5);
-
-		line = get_input(av);
-
-		write(1, line, _strlen(line));
+		input = get_input(av);
+		tokens = input_tokenizer(input);
 
 		free(line);
+		free(tokens);
 	}
 
 }
