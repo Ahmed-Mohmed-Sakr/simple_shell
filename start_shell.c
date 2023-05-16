@@ -20,7 +20,9 @@ int start_shell(int ac, char **av, char **env)
 
 	while (1)
 	{
-		write(1, shell_name, 5);
+		if (isatty(STDIN_FILENO))
+			write(1, shell_name, 5);
+
 		input = get_input(av);
 		if (input == NULL)
 			continue;
