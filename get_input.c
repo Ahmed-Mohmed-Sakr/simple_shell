@@ -17,10 +17,20 @@ char *get_input(char **av)
 	nread =  getline(&line, &len, stdin);
 	if (nread == -1)
 	{
-		write(2, av[0], _strlen(av[0]));
-		write(2, " :can not read input\n", 21);
-		free(line);
+		if (feof(stdin))
+		{
+			exit(0);
+		}
+		else
+		{
+			_print(2, av, " :can not read input\n");
+			free(line);
+			return (NULL);
+		}
 	}
+
+	if (line[nread - 1] == '\n')
+		line[nread - 1] = '\0';
 
 	return (line);
 }

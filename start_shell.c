@@ -20,15 +20,26 @@ int start_shell(int ac, char **av, char **env)
 
 	while (1)
 	{
-		write(1, shell_name, 5);
+		if (isatty(STDIN_FILENO))
+			write(1, shell_name, 5);
+
 		input = get_input(av);
+		if (input == NULL)
+			continue;
 
 		tokens = input_tokenizer(input, av);
+		if (tokens == NULL)
+		{
+			free(input);
+			continue;
+		}
 
 		execute_commands(tokens, av, env);
 
 		free(input);
 		free(tokens);
 	}
+
+	return (0);
 
 }
