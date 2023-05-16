@@ -35,6 +35,9 @@ void execute_commands(char **tokens, char **av, char **env)
 	}
 	else
 	{
-		wait(&stat);
+		do
+		{
+			waitpid(child_pid, &stat, WUNTRACED);
+		} while (!WIFEXITED(stat) && !WIFSIGNALED(stat));
 	}
 }
