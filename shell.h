@@ -18,6 +18,7 @@ void execute_commands(char **tokens, char **av, char **env);
 
 /*utili functions*/
 int _strlen(char *line);
+int _strcpy(char *dest, char *src);
 void _print(int status, char **av, char *message);
 
 #endif /*SHELL_H*/

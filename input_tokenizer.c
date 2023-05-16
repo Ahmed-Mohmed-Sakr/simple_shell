@@ -44,7 +44,7 @@ char **input_tokenizer(char *input, char **av)
 		_print(2, av, " :error in allocate memory");
 		return (NULL);
 	}
-	strcpy(input_copy, input);
+	_strcpy(input_copy, input);
 	len = tokens_number(input_copy);
 	free(input_copy);
 
