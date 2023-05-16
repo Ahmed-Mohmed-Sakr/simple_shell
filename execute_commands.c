@@ -15,11 +15,13 @@ void execute_commands(char **tokens, char **av, char **env)
 	pid_t child_pid;
 	int stat;
 
+	if (tokens == NULL || tokens[0] == NULL)
+		return;
 
 	child_pid = fork();
 	if (child_pid == -1)
 	{
-		_print(2, av, " :error in creating process");
+		_print(2, av, " :error in creating process\n");
 		return;
 	}
 
@@ -27,7 +29,7 @@ void execute_commands(char **tokens, char **av, char **env)
 	{
 		if (execve(tokens[0], tokens, env) == -1)
 		{
-			_print(2, av, " :error in execute");
+			_print(2, av, " :error in execute\n");
 			exit(1);
 		}
 	}

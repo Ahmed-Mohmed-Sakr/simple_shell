@@ -22,6 +22,7 @@ int start_shell(int ac, char **av, char **env)
 	{
 		write(1, shell_name, 5);
 		input = get_input(av);
+
 		tokens = input_tokenizer(input, av);
 
 		execute_commands(tokens, av, env);
