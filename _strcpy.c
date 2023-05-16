@@ -20,7 +20,7 @@ int _strcpy(char *dest, char *src)
 		dest[len] = src[len];
 		len++;
 	}
-	dest[len] = NULL;
+	dest[len] = '\0';
 
 	return (1);
 }
