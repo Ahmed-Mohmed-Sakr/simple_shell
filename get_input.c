@@ -19,6 +19,7 @@ char *get_input(char **av)
 	{
 		if (feof(stdin))
 		{
+			free(line);
 			exit(0);
 		}
 		else

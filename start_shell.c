@@ -40,6 +40,11 @@ int start_shell(int ac, char **av, char **env)
 		free_arr(tokens);
 	}
 
+	if (input != NULL)
+		free(input);
+
+	if (tokens != NULL)
+		free_arr(tokens);
 	return (0);
 
 }
