@@ -33,10 +33,10 @@ int start_shell(int ac, char **av, char **env)
 			free(input);
 			continue;
 		}
+		free(input);
 
 		execute_commands(tokens, av, env);
 
-		free(input);
 		free_arr(tokens);
 	}
 

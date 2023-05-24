@@ -17,6 +17,12 @@ int custom_commands(char **tokens, char **env)
 
 		return (1);
 	}
+	else if (_strcmp(tokens[0], "exit", 4) == 0)
+	{
+		exit_shell(tokens);
+
+		return (1);
+	}
 
 	return (0);
 }
