@@ -56,7 +56,7 @@ char **input_tokenizer(char *input, char **av)
 	token = strtok(input, delim);
 	while (token != NULL)
 	{
-		tokens[i] = malloc(_strlen(token) * sizeof(char) + 1);
+		tokens[i] = malloc((_strlen(token)+1) * sizeof(char));
 		if (tokens == NULL)
 		{
 			while (i > 0)
@@ -65,7 +65,7 @@ char **input_tokenizer(char *input, char **av)
 			_print(2, av, " :error in allocate memory");
 			return (NULL);
 		}
-		tokens[i] = token;
+		_strcpy(tokens[i], token);
 		token = strtok(NULL, delim);
 		i++;
 	}
