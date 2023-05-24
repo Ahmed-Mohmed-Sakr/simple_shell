@@ -15,4 +15,10 @@ void exit_shell(char **tokens)
 		free_arr(tokens);
 		exit(0);
 	}
+	else
+	{
+		/*i will handle it later just let it now*/
+		free_arr(tokens);
+		exit(0);
+	}
 }
