@@ -21,6 +21,7 @@ char *_getenv(char **env, char *command);
 void print_env(char **env);
 void free_arr(char **arr);
 int custom_commands(char **tokens, char **env);
+void exit_shell(char **tokens);
 
 /*utili functions*/
 int _strlen(char *line);
