@@ -39,6 +39,7 @@ int get_accessable_path(char **tokens, char **env)
 		_strcat(command, tokens[0]);
 		if (stat(command, &sb) == 0)
 		{
+			free(tokens[0]);
 			tokens[0] = command;
 			free(path_copy);
 			return (1);
