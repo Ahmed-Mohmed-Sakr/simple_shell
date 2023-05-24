@@ -40,7 +40,8 @@ void execute_commands(char **tokens, char **av, char **env)
 	{
 		if (execve(tokens[0], tokens, env) == -1)
 		{
-			_print(2, av, " :error in execute\n");
+			print_execute_error(2, av, tokens[0]);
+			free_arr(tokens);
 			exit(1);
 		}
 	}

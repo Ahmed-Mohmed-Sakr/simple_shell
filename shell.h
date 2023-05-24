@@ -29,5 +29,6 @@ int _strcpy(char *dest, char *src);
 int _strcmp(char *s1, char *s2, size_t len);
 char *_strcat(char *dest, const char *src);
 void _print(int status, char **av, char *message);
+void print_execute_error(int status, char **av, char *command);
 
 #endif /*SHELL_H*/
