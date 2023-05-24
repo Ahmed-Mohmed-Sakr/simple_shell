@@ -18,6 +18,15 @@ void execute_commands(char **tokens, char **av, char **env)
 	if (tokens == NULL || tokens[0] == NULL)
 		return;
 
+	if (tokens[0][0] != '.' && tokens[0][0] != '/')
+	{
+		if (!get_accessable_path(tokens, env))
+		{
+			_print(2, av, " :command not exist\n");
+			return;
+		}
+	}
+
 	child_pid = fork();
 	if (child_pid == -1)
 	{

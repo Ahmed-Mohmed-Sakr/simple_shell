@@ -37,7 +37,7 @@ int start_shell(int ac, char **av, char **env)
 		execute_commands(tokens, av, env);
 
 		free(input);
-		free(tokens);
+		free_arr(tokens);
 	}
 
 	return (0);
