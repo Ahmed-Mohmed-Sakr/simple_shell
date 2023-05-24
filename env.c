@@ -21,3 +21,20 @@ char *_getenv(char **env, char *command)
 
 	return (NULL);
 }
+
+/**
+ * print_env - print environment.
+ *
+ * Return: void.
+ */
+void print_env()
+{
+	char **envp = environ;
+
+	while (*envp != NULL)
+	{
+		write(1, *envp, _strlen(*envp));
+		write(1, "\n", 1);
+		envp++;
+	}
+}
