@@ -20,7 +20,7 @@ void execute_commands(char **tokens, char **av, char **env)
 
 	if (tokens[0][0] != '.' && tokens[0][0] != '/')
 	{
-		if (custom_commands(tokens))
+		if (custom_commands(tokens, env))
 			return;
 		else if (!get_accessable_path(tokens, env))
 		{

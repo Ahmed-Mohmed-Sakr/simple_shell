@@ -25,11 +25,14 @@ char *_getenv(char **env, char *command)
 /**
  * print_env - print environment.
  *
+ *
+ * @env: environment to print.
+ *
  * Return: void.
  */
-void print_env()
+void print_env(char **env)
 {
-	char **envp = environ;
+	char **envp = env;
 
 	while (*envp != NULL)
 	{
