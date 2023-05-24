@@ -24,7 +24,7 @@ void execute_commands(char **tokens, char **av, char **env)
 			return;
 		else if (!get_accessable_path(tokens, env))
 		{
-			_print(2, av, " :command not exist\n");
+			print_execute_error(2, av, tokens[0]);
 			return;
 		}
 	}
