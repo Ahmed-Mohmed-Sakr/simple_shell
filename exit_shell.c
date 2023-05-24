@@ -10,15 +10,17 @@
  */
 void exit_shell(char **tokens)
 {
+	int code = 0;
+
 	if (tokens[1] == NULL)
 	{
 		free_arr(tokens);
-		exit(0);
+		exit(code);
 	}
 	else
 	{
-		/*i will handle it later just let it now*/
+		code = atoi(tokens[1]);
 		free_arr(tokens);
-		exit(0);
+		exit(code);
 	}
 }
