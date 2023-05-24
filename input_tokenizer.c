@@ -56,7 +56,7 @@ char **input_tokenizer(char *input, char **av)
 	token = strtok(input, delim);
 	while (token != NULL)
 	{
-		tokens[i] = malloc((_strlen(token)+1) * sizeof(char));
+		tokens[i] = malloc((_strlen(token) + 1) * sizeof(char));
 		if (tokens == NULL)
 		{
 			while (i > 0)
