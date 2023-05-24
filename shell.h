@@ -10,6 +10,9 @@
 #include <sys/wait.h>
 #include <sys/stat.h>
 
+/* Global environemnt */
+extern char **environ;
+
 /*main functions*/
 int start_shell(int ac, char **av, char **env);
 char *get_input(char **av);
@@ -18,7 +21,9 @@ int tokens_number(char *input);
 void execute_commands(char **tokens, char **av, char **env);
 int get_accessable_path(char **tokens, char **env);
 char *_getenv(char **env, char *command);
+void print_env();
 void free_arr(char **arr);
+int custom_commands(char **tokens);
 
 /*utili functions*/
 int _strlen(char *line);

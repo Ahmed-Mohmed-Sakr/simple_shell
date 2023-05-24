@@ -20,7 +20,9 @@ void execute_commands(char **tokens, char **av, char **env)
 
 	if (tokens[0][0] != '.' && tokens[0][0] != '/')
 	{
-		if (!get_accessable_path(tokens, env))
+		if (custom_commands(tokens))
+			return;
+		else if (!get_accessable_path(tokens, env))
 		{
 			_print(2, av, " :command not exist\n");
 			return;
