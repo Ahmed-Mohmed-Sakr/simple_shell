@@ -33,7 +33,7 @@ int tokens_number(char *input)
  */
 char **input_tokenizer(char *input, char **av)
 {
-	char *delim = " \n", *input_copy = NULL, *token;
+	char *delim = " \t\r\n", *input_copy = NULL, *token;
 	int len = 0, i = 0;
 	char **tokens = NULL;
 
