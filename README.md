@@ -1,4 +1,4 @@
-# 0x16. C - Simple Shell
+# Simple Shell (AZA Shell)
 
 <!-- <p align="center">   -->
 <img src ="https://assets.imaginablefutures.com/media/images/ALX_Logo.max-200x150.png">
@@ -49,10 +49,10 @@
 ## Output
 ```
 $ ./hsh
-($) /bin/ls
+AZA$ /bin/ls
 hsh main.c shell.c
-($)
-($) exit
+AZA$
+AZA$ exit
 $
 ```
 > AND
