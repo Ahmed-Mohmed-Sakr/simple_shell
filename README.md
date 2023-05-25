@@ -1,5 +1,9 @@
 # 0x16. C - Simple Shell
 
+<!-- <p align="center">   -->
+<img src ="https://assets.imaginablefutures.com/media/images/ALX_Logo.max-200x150.png">
+<!-- </p> -->
+
 > Write a simple UNIX command interpreter.
 <p align="center">  
 <img width="95%" height="450px" src ="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/235/shell.jpeg">
@@ -65,3 +69,6 @@ hsh main.c shell.c test_ls_2
 hsh main.c shell.c test_ls_2
 $
 ```
+
+## Authors
+Ahmed Sakr | [@Ahmed-Mohmed-Sakr](https://github.com/Ahmed-Mohmed-Sakr)
